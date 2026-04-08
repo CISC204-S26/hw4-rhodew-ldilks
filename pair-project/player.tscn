@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cubcsnxkobfho"]
+
+[ext_resource type="Script" uid="uid://ct1li2p8np6md" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cbdxfwrjyresj" path="res://icon.svg" id="2_i3pqv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wn13g"]
+radius = 19.0
+height = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_onrkg"]
+radius = 46.010868
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1717959357]
+script = ExtResource("1_onrkg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=558477082]
+position = Vector2(0, -1)
+scale = Vector2(0.28906253, 0.5)
+texture = ExtResource("2_i3pqv")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=447829566]
+shape = SubResource("CapsuleShape2D_wn13g")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=630748404]
+
+[node name="InteractRange" type="CollisionShape2D" parent="Area2D" unique_id=1429059716]
+shape = SubResource("CircleShape2D_onrkg")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
