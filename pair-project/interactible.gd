@@ -6,9 +6,12 @@ class_name Interactable extends Area2D
 
 var is_switched: bool = false;
 
+signal switcheroo
+
 func interact():
 	is_switched = !is_switched
 	print_debug(is_switched)
+	switcheroo.emit(is_switched)
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
