@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dkapx3i0trh0s"]
+
+[ext_resource type="Script" uid="uid://cqsrkglx1o324" path="res://interactible.gd" id="1_f8sn6"]
+[ext_resource type="Texture2D" uid="uid://cbdxfwrjyresj" path="res://icon.svg" id="2_8wxgd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhewe"]
+
+[node name="Switch" type="Area2D" unique_id=1281547832]
+script = ExtResource("1_f8sn6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1403252016]
+shape = SubResource("RectangleShape2D_jhewe")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=474402160]
+scale = Vector2(0.140625, 0.109374985)
+texture = ExtResource("2_8wxgd")
