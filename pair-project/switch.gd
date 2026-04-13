@@ -1,6 +1,6 @@
 class_name Switch extends Area2D
 
-@export var interaction_name = "Switch"
+@export var interaction_name = "switch"
 @export var itneraction_type = "switch"
 @export var display_active = false;
 

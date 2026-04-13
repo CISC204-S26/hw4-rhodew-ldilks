@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="2_oqbmf"]
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="3_arrdh"]
-[ext_resource type="Script" uid="uid://gyohgotkujl0" path="res://door.gd" id="4_ju58f"]
+[ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="4_ju58f"]
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="5_sqxie"]
 
 [node name="Rhode\'s Funky Test Thing Or Something Idk Man i started typing and cant stop help Help HELP ME" type="Node2D" unique_id=1802554463]
@@ -14,9 +14,10 @@ collision_mask = 0
 
 [node name="Door" parent="." unique_id=1668404855 instance=ExtResource("3_arrdh")]
 position = Vector2(395, 64)
-script = ExtResource("4_ju58f")
 
 [node name="Player" parent="." unique_id=1565198641 instance=ExtResource("5_sqxie")]
 position = Vector2(148, 230)
+
+[node name="Note" parent="." unique_id=1282192734 instance=ExtResource("4_ju58f")]
 
 [connection signal="switcheroo" from="Switch" to="Door" method="_on_switch_switcheroo"]

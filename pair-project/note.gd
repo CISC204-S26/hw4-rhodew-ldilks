@@ -1,0 +1,22 @@
+class_name Interactable extends Area2D
+
+@export var interaction_name = "note"
+@export var itneraction_type = "note"
+@export var display_active = false;
+
+var is_interacted: bool = false;
+@export var the_text = ""
+
+signal reading
+
+func interact():
+	is_interacted = !is_interacted
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
