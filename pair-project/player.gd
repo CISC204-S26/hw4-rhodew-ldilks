@@ -30,7 +30,8 @@ func _physics_process(delta: float) -> void:
 	
 	
 	if Input.is_action_just_pressed("interact"):
-		nearby_interactibles[-1].interact();
+		if nearby_interactibles:
+			nearby_interactibles[-1].interact();
 	move_and_slide()
 
 

@@ -2,13 +2,15 @@
 
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="2_oqbmf"]
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="3_arrdh"]
-[ext_resource type="Script" path="res://door.gd" id="4_ju58f"]
+[ext_resource type="Script" uid="uid://gyohgotkujl0" path="res://door.gd" id="4_ju58f"]
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="5_sqxie"]
 
 [node name="Rhode\'s Funky Test Thing Or Something Idk Man i started typing and cant stop help Help HELP ME" type="Node2D" unique_id=1802554463]
 
 [node name="Switch" parent="." unique_id=1281547832 instance=ExtResource("2_oqbmf")]
 position = Vector2(593, 239)
+collision_layer = 2
+collision_mask = 0
 
 [node name="Door" parent="." unique_id=1668404855 instance=ExtResource("3_arrdh")]
 position = Vector2(395, 64)

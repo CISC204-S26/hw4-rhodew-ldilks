@@ -1,7 +1,7 @@
 class_name Switch extends Area2D
 
-@export var interaction_name = "test_interaction"
-@export var itneraction_type = "test"
+@export var interaction_name = "Switch"
+@export var itneraction_type = "switch"
 @export var display_active = false;
 
 var is_switched: bool = false;
@@ -12,6 +12,12 @@ func interact():
 	is_switched = !is_switched
 	print_debug(is_switched)
 	switcheroo.emit(is_switched)
+	if is_switched == true:
+		$Sprite2D.hide()
+		$Sprite2D2.show()
+	else:
+		$Sprite2D.show()
+		$Sprite2D2.hide()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
