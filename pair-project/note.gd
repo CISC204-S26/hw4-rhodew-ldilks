@@ -1,4 +1,4 @@
-class_name Interactable extends Area2D
+class_name Note extends Area2D
 
 @export var interaction_name = "note"
 @export var itneraction_type = "note"
