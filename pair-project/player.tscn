@@ -19,7 +19,7 @@ texture = ExtResource("2_onrkg")
 shape = SubResource("RectangleShape2D_i3pqv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=630748404]
-collision_layer = 0
+collision_layer = 2
 collision_mask = 2
 
 [node name="InteractRange" type="CollisionShape2D" parent="Area2D" unique_id=1429059716]

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dnbwsxh4w8u8b"]
+
+[ext_resource type="Script" uid="uid://dy3ceo6egquku" path="res://keypad.gd" id="1_0sp1t"]
+[ext_resource type="Texture2D" uid="uid://w575va6i3ywy" path="res://Keypad Off.png" id="2_4swqm"]
+
+[node name="Keypad" type="Area2D" unique_id=1683995545]
+script = ExtResource("1_0sp1t")
+interaction_name = "test_interaction"
+itneraction_type = "test"
+metadata/_custom_type_script = "uid://cqsrkglx1o324"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=658738175]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989388873]
+texture = ExtResource("2_4swqm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=2043847026]
+texture = ExtResource("2_4swqm")

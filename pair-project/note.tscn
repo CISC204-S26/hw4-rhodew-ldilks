@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://cts0qygsgh7r1"]
 
 [ext_resource type="Script" uid="uid://b7vjb1llxraty" path="res://note.gd" id="1_doocs"]
-[ext_resource type="Texture2D" uid="uid://cbdxfwrjyresj" path="res://icon.svg" id="2_wn01w"]
+[ext_resource type="Texture2D" uid="uid://bx8vqv3dvo6mn" path="res://notes.png" id="2_wn01w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wn01w"]
-size = Vector2(124, 124)
+size = Vector2(24, 40)
 
 [node name="Note" type="Area2D" unique_id=1282192734]
 position = Vector2(1, -6)
@@ -19,4 +19,5 @@ shape = SubResource("RectangleShape2D_wn01w")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=574858178]
 texture = ExtResource("2_wn01w")
 
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
