@@ -2,10 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="2_oqbmf"]
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="3_arrdh"]
+[ext_resource type="PackedScene" uid="uid://dnbwsxh4w8u8b" path="res://keypad.tscn" id="4_3vbl4"]
 [ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="4_ju58f"]
 [ext_resource type="Texture2D" uid="uid://cw5je03q8teaf" path="res://Note.png" id="5_bd7ek"]
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="5_sqxie"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="6_bd7ek"]
+[ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="8_6r6vx"]
 
 [node name="Rhode\'s Funky Test Thing Or Something Idk Man i started typing and cant stop help Help HELP ME" type="Node2D" unique_id=1802554463]
 
@@ -18,16 +20,25 @@ position = Vector2(593, 239)
 [node name="Door" parent="." unique_id=1668404855 instance=ExtResource("3_arrdh")]
 position = Vector2(395, 64)
 
+[node name="Keypad" parent="." unique_id=1683995545 instance=ExtResource("4_3vbl4")]
+position = Vector2(667, 377)
+
 [node name="Player" parent="." unique_id=1565198641 instance=ExtResource("5_sqxie")]
 position = Vector2(148, 230)
 
 [node name="paper" type="TextureRect" parent="." unique_id=931333425]
 visible = false
-offset_left = 500.0
-offset_right = 800.0
-offset_bottom = 500.0
+offset_left = 450.0
+offset_top = 75.0
+offset_right = 750.0
+offset_bottom = 575.0
 texture = ExtResource("5_bd7ek")
 script = ExtResource("6_bd7ek")
 
+[node name="Buttons" parent="." unique_id=1161783585 instance=ExtResource("8_6r6vx")]
+position = Vector2(-1000, -1000)
+
 [connection signal="reading" from="Note" to="paper" method="_on_note_reading"]
 [connection signal="switcheroo" from="Switch" to="Door" method="_on_switch_switcheroo"]
+[connection signal="input" from="Keypad" to="Buttons" method="_on_keypad_input"]
+[connection signal="correct_code" from="Buttons" to="Keypad" method="_on_buttons_correct_code"]

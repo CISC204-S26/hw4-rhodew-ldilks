@@ -88,7 +88,6 @@ offset_left = 10.0
 offset_top = 10.0
 offset_right = 290.0
 offset_bottom = 95.0
-text = "12345"
 label_settings = SubResource("LabelSettings_5sm3h")
 
 [connection signal="button_down" from="one" to="." method="_on_one_button_down"]

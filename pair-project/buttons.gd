@@ -11,6 +11,8 @@ var numbers_of_code = 0
 var the_text = ""
 var secret_code = [first, second, third, fourth, fifth]
 
+signal correct_code
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -73,6 +75,16 @@ func _on_zero_button_down() -> void:
 
 func _on_yes_button_down() -> void:
 	if code == secret_code:
-		pass
+		correct_code.emit()
+		position = Vector2(-1000.0, -1000.0)
 	else:
-		pass
+		code = []
+		numbers_of_code = 0
+		$Label.text = "WRONG"
+
+
+func _on_keypad_input(is_interacted) -> void:
+	if is_interacted == true:
+		position = Vector2(450.0, 75.0)
+	else:
+		position = Vector2(-1000.0, -1000.0)
