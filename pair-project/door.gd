@@ -1,5 +1,6 @@
 extends StaticBody2D
 
+var is_open = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,10 +12,19 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_switch_switcheroo(is_switched) -> void:
-	if is_switched == true:
+func switch():
+	is_open = !is_open
+	if is_open == true:
 		hide()
 		$CollisionShape2D.set_deferred("disabled", true)
 	else:
 		show()
 		$CollisionShape2D.set_deferred("disabled", false)
+
+
+func _on_switch_switcheroo() -> void:
+	switch()
+
+
+func _on_keypad_switcheroo() -> void:
+	switch()

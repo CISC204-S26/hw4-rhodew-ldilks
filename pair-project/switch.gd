@@ -10,8 +10,7 @@ signal switcheroo
 
 func interact():
 	is_switched = !is_switched
-	print_debug(is_switched)
-	switcheroo.emit(is_switched)
+	switcheroo.emit()
 	if is_switched == true:
 		$Sprite2D.hide()
 		$Sprite2D2.show()
