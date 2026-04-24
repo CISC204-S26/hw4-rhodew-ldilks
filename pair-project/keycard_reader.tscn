@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cp8yywdklulne"]
+
+[ext_resource type="Script" uid="uid://eyfgals1bq7e" path="res://keycardreader.gd" id="1_48cni"]
+[ext_resource type="Texture2D" uid="uid://q1wgpr6pf2ti" path="res://KeyCardReaderOffOff.png" id="2_bmbcq"]
+[ext_resource type="Texture2D" uid="uid://cfkbo0f3iv35l" path="res://KeyCardReaderOnOn.png" id="3_gbsrd"]
+[ext_resource type="Texture2D" uid="uid://b7i7c235srmea" path="res://KeyCardReaderOffOn.png" id="4_c6ast"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_48cni"]
+size = Vector2(48, 48)
+
+[node name="KeycardReader" type="Area2D" unique_id=513023139]
+script = ExtResource("1_48cni")
+metadata/_custom_type_script = "uid://cqsrkglx1o324"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2104009143]
+shape = SubResource("RectangleShape2D_48cni")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1272968622]
+texture = ExtResource("2_bmbcq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=704840262]
+texture = ExtResource("3_gbsrd")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1216597035]
+texture = ExtResource("4_c6ast")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1743432056]
+texture = ExtResource("3_gbsrd")

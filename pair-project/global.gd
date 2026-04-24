@@ -1,13 +1,7 @@
-extends Area2D
+extends Node
 
-@export var interaction_name = "test_interaction"
-@export var itneraction_type = "test"
-@export var display_active = false;
-
-var is_interacted: bool = false;
-
-func interact():
-	is_interacted = !is_interacted
+var key_card_1_got = false
+var key_card_2_got = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

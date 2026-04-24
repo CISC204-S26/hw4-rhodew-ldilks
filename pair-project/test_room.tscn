@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbwsxh4w8u8b" path="res://keypad.tscn" id="4_3vbl4"]
 [ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="4_ju58f"]
 [ext_resource type="Texture2D" uid="uid://cw5je03q8teaf" path="res://Note.png" id="5_bd7ek"]
+[ext_resource type="PackedScene" uid="uid://cp8yywdklulne" path="res://keycard_reader.tscn" id="5_dsxg1"]
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="5_sqxie"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="6_bd7ek"]
 [ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="8_6r6vx"]
@@ -26,6 +27,8 @@ position = Vector2(395, 64)
 
 [node name="Keypad" parent="." unique_id=1683995545 instance=ExtResource("4_3vbl4")]
 position = Vector2(667, 377)
+
+[node name="KeycardReader" parent="." unique_id=513023139 instance=ExtResource("5_dsxg1")]
 
 [node name="Player" parent="." unique_id=1565198641 instance=ExtResource("5_sqxie")]
 position = Vector2(148, 230)
