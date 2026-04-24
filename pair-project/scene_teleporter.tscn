@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dt2l5cd08u8b7"]
+
+[ext_resource type="Script" uid="uid://bnyo2ijcdyhqb" path="res://scene_teleporter.gd" id="1_t2amu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebpxf"]
+
+[node name="SceneTeleporter" type="Area2D" unique_id=722761562]
+script = ExtResource("1_t2amu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1989504997]
+shape = SubResource("RectangleShape2D_ebpxf")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D" unique_id=1181518091]

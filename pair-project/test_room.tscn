@@ -9,10 +9,12 @@
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="5_sqxie"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="6_bd7ek"]
 [ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="8_6r6vx"]
-[ext_resource type="PackedScene" path="res://text_trigger.tscn" id="9_6r6vx"]
+[ext_resource type="PackedScene" uid="uid://bgcmvdadnbt5x" path="res://text_trigger.tscn" id="9_6r6vx"]
 [ext_resource type="PackedScene" uid="uid://qhcqclx34dmx" path="res://text_typer.tscn" id="10_i507p"]
 [ext_resource type="Texture2D" uid="uid://cj2ls2p2boqye" path="res://Player.png" id="11_l3001"]
 [ext_resource type="Texture2D" uid="uid://cbdxfwrjyresj" path="res://icon.svg" id="12_dsxg1"]
+[ext_resource type="PackedScene" uid="uid://dt2l5cd08u8b7" path="res://scene_teleporter.tscn" id="14_hmsmm"]
+[ext_resource type="PackedScene" uid="uid://bn28urxhjc6lr" path="res://liam's test.tscn" id="15_ns36f"]
 
 [node name="Rhode\'s Funky Test Thing Or Something Idk Man i started typing and cant stop help Help HELP ME" type="Node2D" unique_id=1802554463]
 
@@ -50,6 +52,11 @@ position = Vector2(362, 328)
 text_scene = ExtResource("10_i507p")
 faces = Array[Texture2D]([ExtResource("11_l3001"), ExtResource("12_dsxg1")])
 lines = Array[String](["this is the test inspect test", "Hello its me john godot"])
+
+[node name="SceneTeleporter" parent="." unique_id=722761562 instance=ExtResource("14_hmsmm")]
+position = Vector2(339, 585)
+scale = Vector2(21.8, 1)
+target_scene = ExtResource("15_ns36f")
 
 [connection signal="reading" from="Note" to="paper" method="_on_note_reading"]
 [connection signal="switcheroo" from="Switch" to="Door" method="_on_switch_switcheroo"]
