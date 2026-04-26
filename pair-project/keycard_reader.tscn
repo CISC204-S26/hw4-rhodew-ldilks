@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://eyfgals1bq7e" path="res://keycardreader.gd" id="1_48cni"]
 [ext_resource type="Texture2D" uid="uid://q1wgpr6pf2ti" path="res://KeyCardReaderOffOff.png" id="2_bmbcq"]
+[ext_resource type="Texture2D" uid="uid://dc21m8hivqhxu" path="res://KeyCardReaderOnOff.png" id="3_c6ast"]
 [ext_resource type="Texture2D" uid="uid://cfkbo0f3iv35l" path="res://KeyCardReaderOnOn.png" id="3_gbsrd"]
 [ext_resource type="Texture2D" uid="uid://b7i7c235srmea" path="res://KeyCardReaderOffOn.png" id="4_c6ast"]
 
@@ -9,6 +10,8 @@
 size = Vector2(48, 48)
 
 [node name="KeycardReader" type="Area2D" unique_id=513023139]
+collision_layer = 2
+collision_mask = 3
 script = ExtResource("1_48cni")
 metadata/_custom_type_script = "uid://cqsrkglx1o324"
 
@@ -19,10 +22,13 @@ shape = SubResource("RectangleShape2D_48cni")
 texture = ExtResource("2_bmbcq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=704840262]
-texture = ExtResource("3_gbsrd")
+visible = false
+texture = ExtResource("3_c6ast")
 
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1216597035]
+visible = false
 texture = ExtResource("4_c6ast")
 
 [node name="Sprite2D4" type="Sprite2D" parent="." unique_id=1743432056]
+visible = false
 texture = ExtResource("3_gbsrd")

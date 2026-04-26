@@ -28,3 +28,7 @@ func _on_switch_switcheroo() -> void:
 
 func _on_keypad_switcheroo() -> void:
 	switch()
+
+
+func _on_keycard_reader_unlocked() -> void:
+	switch()

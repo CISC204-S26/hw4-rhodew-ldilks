@@ -8,12 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cp8yywdklulne" path="res://keycard_reader.tscn" id="5_dsxg1"]
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="5_sqxie"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="6_bd7ek"]
+[ext_resource type="PackedScene" uid="uid://mh1aju5o7ebw" path="res://keycard.tscn" id="6_fxut8"]
 [ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="8_6r6vx"]
-[ext_resource type="PackedScene" uid="uid://bgcmvdadnbt5x" path="res://text_trigger.tscn" id="9_6r6vx"]
+[ext_resource type="PackedScene" path="res://text_trigger.tscn" id="9_6r6vx"]
 [ext_resource type="PackedScene" uid="uid://qhcqclx34dmx" path="res://text_typer.tscn" id="10_i507p"]
 [ext_resource type="Texture2D" uid="uid://cj2ls2p2boqye" path="res://Player.png" id="11_l3001"]
 [ext_resource type="Texture2D" uid="uid://cbdxfwrjyresj" path="res://icon.svg" id="12_dsxg1"]
-[ext_resource type="PackedScene" uid="uid://dt2l5cd08u8b7" path="res://scene_teleporter.tscn" id="14_hmsmm"]
+[ext_resource type="PackedScene" path="res://scene_teleporter.tscn" id="14_hmsmm"]
 [ext_resource type="PackedScene" uid="uid://bn28urxhjc6lr" path="res://liam's test.tscn" id="15_ns36f"]
 
 [node name="Rhode\'s Funky Test Thing Or Something Idk Man i started typing and cant stop help Help HELP ME" type="Node2D" unique_id=1802554463]
@@ -31,6 +32,14 @@ position = Vector2(395, 64)
 position = Vector2(667, 377)
 
 [node name="KeycardReader" parent="." unique_id=513023139 instance=ExtResource("5_dsxg1")]
+position = Vector2(889, 329)
+
+[node name="Keycard" parent="." unique_id=1976920624 instance=ExtResource("6_fxut8")]
+position = Vector2(1073, 345)
+
+[node name="Keycard2" parent="." unique_id=2037064157 instance=ExtResource("6_fxut8")]
+position = Vector2(1051, 486)
+keycard_number = 2
 
 [node name="Player" parent="." unique_id=1565198641 instance=ExtResource("5_sqxie")]
 position = Vector2(148, 230)
@@ -62,4 +71,5 @@ target_scene = ExtResource("15_ns36f")
 [connection signal="switcheroo" from="Switch" to="Door" method="_on_switch_switcheroo"]
 [connection signal="input" from="Keypad" to="Buttons" method="_on_keypad_input"]
 [connection signal="switcheroo" from="Keypad" to="Door" method="_on_keypad_switcheroo"]
+[connection signal="unlocked" from="KeycardReader" to="Door" method="_on_keycard_reader_unlocked"]
 [connection signal="correct_code" from="Buttons" to="Keypad" method="_on_buttons_correct_code"]

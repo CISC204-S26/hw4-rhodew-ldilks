@@ -4,7 +4,7 @@ class_name Interactable extends Area2D
 @export var itneraction_type = "keycard_reader"
 @export var display_active = false;
 
-var is_interacted: bool = false;
+signal unlocked
 
 func interact():
 	if Global.key_card_1_got == true:
@@ -17,7 +17,7 @@ func interact():
 			$Sprite2D2.hide()
 			$Sprite2D3.hide()
 			$Sprite2D4.show()
-			is_interacted = !is_interacted
+			unlocked.emit()
 	else:
 		if Global.key_card_2_got == true:
 			$Sprite2D.hide()

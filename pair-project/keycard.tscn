@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://mh1aju5o7ebw"]
+
+[ext_resource type="Script" uid="uid://byp4xo1wwblnn" path="res://keycard.gd" id="1_mrm1b"]
+[ext_resource type="Texture2D" uid="uid://cdmodywodu7ls" path="res://Keycard.png" id="2_hj5ur"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c7mrs"]
+size = Vector2(40, 24)
+
+[node name="Keycard" type="Area2D" unique_id=1976920624]
+collision_layer = 2
+collision_mask = 3
+script = ExtResource("1_mrm1b")
+interaction_name = "keycard_reader"
+itneraction_type = "keycard_reader"
+metadata/_custom_type_script = "uid://eyfgals1bq7e"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=108442735]
+shape = SubResource("RectangleShape2D_c7mrs")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=56527884]
+texture = ExtResource("2_hj5ur")
