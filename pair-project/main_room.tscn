@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://b7np22vfja0mj" path="res://Note1.png" id="8_8007g"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="9_bdfba"]
 [ext_resource type="Texture2D" uid="uid://dquopbdu2npv4" path="res://area_bg.png" id="10_pj3qg"]
+[ext_resource type="Texture2D" uid="uid://c0j82crmqh8ti" path="res://spr_crates.png" id="11_y6pwk"]
 
 [node name="MainRoom" type="Node2D" unique_id=322570895]
 
@@ -263,6 +264,16 @@ target_scene = "res://left_room.tscn"
 position = Vector2(1280, 325)
 scale = Vector2(7, 7)
 target_scene = "res://right_room.tscn"
+
+[node name="SprCrates" type="Sprite2D" parent="." unique_id=2037753998]
+position = Vector2(112, 45)
+scale = Vector2(3, 3)
+texture = ExtResource("11_y6pwk")
+
+[node name="SprCrates2" type="Sprite2D" parent="." unique_id=788598209]
+position = Vector2(1096, 57)
+scale = Vector2(3, 3)
+texture = ExtResource("11_y6pwk")
 
 [connection signal="unlocked" from="KeycardReader" to="KeyCardDoor" method="_on_keycard_reader_unlocked"]
 [connection signal="unlocked" from="KeycardReader" to="KeyCardDoor2" method="_on_keycard_reader_unlocked"]
