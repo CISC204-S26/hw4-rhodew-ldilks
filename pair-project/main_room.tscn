@@ -4,13 +4,19 @@
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="2_77bs5"]
 [ext_resource type="PackedScene" uid="uid://cp8yywdklulne" path="res://keycard_reader.tscn" id="3_ss6w1"]
 [ext_resource type="PackedScene" uid="uid://boygelq1w2dh3" path="res://wall.tscn" id="3_the2v"]
-[ext_resource type="PackedScene" path="res://scene_teleporter.tscn" id="4_a7ayd"]
+[ext_resource type="PackedScene" uid="uid://dt2l5cd08u8b7" path="res://scene_teleporter.tscn" id="4_a7ayd"]
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="4_t3c8w"]
 [ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="5_1oo4e"]
 [ext_resource type="Texture2D" uid="uid://b7np22vfja0mj" path="res://Note1.png" id="8_8007g"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="9_bdfba"]
+[ext_resource type="Texture2D" uid="uid://dquopbdu2npv4" path="res://area_bg.png" id="10_pj3qg"]
 
 [node name="MainRoom" type="Node2D" unique_id=322570895]
+
+[node name="AreaBg" type="Sprite2D" parent="." unique_id=763883207]
+position = Vector2(608, 215)
+scale = Vector2(3, 3)
+texture = ExtResource("10_pj3qg")
 
 [node name="KeyCardDoor" parent="." unique_id=199639314 instance=ExtResource("2_77bs5")]
 position = Vector2(575, 25)

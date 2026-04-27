@@ -1,18 +1,24 @@
 [gd_scene format=3 uid="uid://fmudtvyjc6dj"]
 
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="1_5rtc6"]
+[ext_resource type="Texture2D" uid="uid://dquopbdu2npv4" path="res://area_bg.png" id="1_65s4u"]
 [ext_resource type="PackedScene" uid="uid://mh1aju5o7ebw" path="res://keycard.tscn" id="1_rivfw"]
 [ext_resource type="PackedScene" uid="uid://boygelq1w2dh3" path="res://wall.tscn" id="2_rivfw"]
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="2_x4tuf"]
 [ext_resource type="PackedScene" uid="uid://dnbwsxh4w8u8b" path="res://keypad.tscn" id="3_wn325"]
 [ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="4_hs131"]
-[ext_resource type="PackedScene" path="res://scene_teleporter.tscn" id="4_jbm5b"]
+[ext_resource type="PackedScene" uid="uid://dt2l5cd08u8b7" path="res://scene_teleporter.tscn" id="4_jbm5b"]
 [ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="4_slj8k"]
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="5_m3m1w"]
 [ext_resource type="Texture2D" uid="uid://cntnm0gy5lfcl" path="res://Note2.png" id="10_85m3l"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="11_65s4u"]
 
 [node name="LeftRoom" type="Node2D" unique_id=1281125665]
+
+[node name="AreaBg" type="Sprite2D" parent="." unique_id=519094318]
+position = Vector2(620, 342)
+scale = Vector2(3, 3)
+texture = ExtResource("1_65s4u")
 
 [node name="Keycard" parent="." unique_id=1976920624 instance=ExtResource("1_rivfw")]
 position = Vector2(1100, 550)
