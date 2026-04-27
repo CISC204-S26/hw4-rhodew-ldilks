@@ -1,10 +1,46 @@
 [gd_scene format=3 uid="uid://cx1ibse3jk1qw"]
 
+[ext_resource type="PackedScene" uid="uid://dnbwsxh4w8u8b" path="res://keypad.tscn" id="1_afuwr"]
+[ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="1_b408t"]
 [ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="1_lyoy0"]
 [ext_resource type="PackedScene" uid="uid://boygelq1w2dh3" path="res://wall.tscn" id="1_qr6yj"]
+[ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="1_tflx1"]
+[ext_resource type="PackedScene" uid="uid://mh1aju5o7ebw" path="res://keycard.tscn" id="2_q4orn"]
+[ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="3_afuwr"]
 [ext_resource type="PackedScene" path="res://scene_teleporter.tscn" id="3_fej7t"]
+[ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="6_12lrj"]
+[ext_resource type="Texture2D" uid="uid://beemrcwd8wwrf" path="res://Note3.png" id="10_447nf"]
+[ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="11_q4orn"]
 
 [node name="RightRoom" type="Node2D" unique_id=1521478644]
+
+[node name="Note" parent="." unique_id=1282192734 instance=ExtResource("1_tflx1")]
+position = Vector2(1075, 175)
+
+[node name="Keycard" parent="." unique_id=1976920624 instance=ExtResource("2_q4orn")]
+position = Vector2(125, 75)
+keycard_number = 2
+
+[node name="Switch" parent="." unique_id=1281547832 instance=ExtResource("1_b408t")]
+position = Vector2(325, 325)
+
+[node name="Switch2" parent="." unique_id=863971218 instance=ExtResource("1_b408t")]
+position = Vector2(125, 525)
+
+[node name="Switch3" parent="." unique_id=15294921 instance=ExtResource("1_b408t")]
+position = Vector2(125, 325)
+
+[node name="Switch4" parent="." unique_id=2008464242 instance=ExtResource("1_b408t")]
+position = Vector2(525, 125)
+
+[node name="Switch5" parent="." unique_id=144323236 instance=ExtResource("1_b408t")]
+position = Vector2(525, 325)
+
+[node name="Switch6" parent="." unique_id=674705731 instance=ExtResource("1_b408t")]
+position = Vector2(725, 525)
+
+[node name="Keypad" parent="." unique_id=1683995545 instance=ExtResource("1_afuwr")]
+position = Vector2(1075, 475)
 
 [node name="Player" parent="." unique_id=1717959357 instance=ExtResource("1_lyoy0")]
 position = Vector2(100, 325)
@@ -210,7 +246,318 @@ position = Vector2(600, 0)
 [node name="Wall67" parent="Wall" unique_id=843823370 instance=ExtResource("1_qr6yj")]
 position = Vector2(650, 0)
 
+[node name="Wall68" parent="Wall" unique_id=535416584 instance=ExtResource("1_qr6yj")]
+position = Vector2(200, 50)
+
+[node name="Wall69" parent="Wall" unique_id=1037712102 instance=ExtResource("1_qr6yj")]
+position = Vector2(200, 100)
+
+[node name="Wall70" parent="Wall" unique_id=1905785351 instance=ExtResource("1_qr6yj")]
+position = Vector2(200, 150)
+
+[node name="Wall71" parent="Wall" unique_id=1257838249 instance=ExtResource("1_qr6yj")]
+position = Vector2(200, 200)
+
+[node name="Wall72" parent="Wall" unique_id=946284093 instance=ExtResource("1_qr6yj")]
+position = Vector2(400, 200)
+
+[node name="Wall73" parent="Wall" unique_id=1677101607 instance=ExtResource("1_qr6yj")]
+position = Vector2(400, 400)
+
+[node name="Wall74" parent="Wall" unique_id=577429264 instance=ExtResource("1_qr6yj")]
+position = Vector2(200, 400)
+
+[node name="Wall75" parent="Wall" unique_id=940943333 instance=ExtResource("1_qr6yj")]
+position = Vector2(600, 400)
+
+[node name="Wall76" parent="Wall" unique_id=778310494 instance=ExtResource("1_qr6yj")]
+position = Vector2(800, 400)
+
+[node name="Wall77" parent="Wall" unique_id=302673431 instance=ExtResource("1_qr6yj")]
+position = Vector2(1000, 400)
+
+[node name="Wall78" parent="Wall" unique_id=1920189348 instance=ExtResource("1_qr6yj")]
+position = Vector2(1000, 200)
+
+[node name="Wall79" parent="Wall" unique_id=391817330 instance=ExtResource("1_qr6yj")]
+position = Vector2(800, 200)
+
+[node name="Wall80" parent="Wall" unique_id=48310598 instance=ExtResource("1_qr6yj")]
+position = Vector2(600, 200)
+
+[node name="Wall81" parent="Wall" unique_id=247352231 instance=ExtResource("1_qr6yj")]
+position = Vector2(1050, 200)
+
+[node name="Wall82" parent="Wall" unique_id=2106327029 instance=ExtResource("1_qr6yj")]
+position = Vector2(1100, 200)
+
+[node name="Wall83" parent="Wall" unique_id=1549816679 instance=ExtResource("1_qr6yj")]
+position = Vector2(1100, 400)
+
+[node name="Wall84" parent="Wall" unique_id=1075434205 instance=ExtResource("1_qr6yj")]
+position = Vector2(1050, 400)
+
+[node name="Door" parent="." unique_id=199639314 instance=ExtResource("3_afuwr")]
+position = Vector2(75, 225)
+
+[node name="Door22" parent="Door" unique_id=1476648444 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door" unique_id=886341329 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door2" parent="." unique_id=1459754774 instance=ExtResource("3_afuwr")]
+position = Vector2(275, 225)
+
+[node name="Door22" parent="Door2" unique_id=1064398540 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door2" unique_id=258358554 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door3" parent="." unique_id=1466353427 instance=ExtResource("3_afuwr")]
+position = Vector2(475, 225)
+
+[node name="Door22" parent="Door3" unique_id=1022162831 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door3" unique_id=1040090239 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door4" parent="." unique_id=1771373103 instance=ExtResource("3_afuwr")]
+position = Vector2(675, 225)
+
+[node name="Door22" parent="Door4" unique_id=1307934307 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door4" unique_id=1040312332 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door5" parent="." unique_id=2109279438 instance=ExtResource("3_afuwr")]
+position = Vector2(875, 225)
+
+[node name="Door22" parent="Door5" unique_id=91078608 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door5" unique_id=1372023071 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door6" parent="." unique_id=519980087 instance=ExtResource("3_afuwr")]
+position = Vector2(875, 425)
+
+[node name="Door22" parent="Door6" unique_id=730200209 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door6" unique_id=1757103743 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door7" parent="." unique_id=1154534791 instance=ExtResource("3_afuwr")]
+position = Vector2(675, 425)
+
+[node name="Door22" parent="Door7" unique_id=1397350989 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door7" unique_id=53856863 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door8" parent="." unique_id=970511144 instance=ExtResource("3_afuwr")]
+position = Vector2(475, 425)
+
+[node name="Door22" parent="Door8" unique_id=850185169 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door8" unique_id=310210197 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door9" parent="." unique_id=1455900397 instance=ExtResource("3_afuwr")]
+position = Vector2(275, 425)
+
+[node name="Door22" parent="Door9" unique_id=1895444749 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door9" unique_id=1398166327 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door10" parent="." unique_id=432930530 instance=ExtResource("3_afuwr")]
+position = Vector2(75, 425)
+
+[node name="Door22" parent="Door10" unique_id=1967192985 instance=ExtResource("3_afuwr")]
+position = Vector2(50, 0)
+
+[node name="Door23" parent="Door10" unique_id=989832811 instance=ExtResource("3_afuwr")]
+position = Vector2(100, 0)
+
+[node name="Door11" parent="." unique_id=456483182 instance=ExtResource("3_afuwr")]
+position = Vector2(425, 75)
+
+[node name="Door22" parent="Door11" unique_id=1734630525 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door11" unique_id=259212578 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door12" parent="." unique_id=969744094 instance=ExtResource("3_afuwr")]
+position = Vector2(625, 75)
+
+[node name="Door22" parent="Door12" unique_id=238633252 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door12" unique_id=412473498 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door13" parent="." unique_id=950705907 instance=ExtResource("3_afuwr")]
+position = Vector2(825, 75)
+
+[node name="Door22" parent="Door13" unique_id=1644576735 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door13" unique_id=586377658 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door14" parent="." unique_id=1259042319 instance=ExtResource("3_afuwr")]
+position = Vector2(825, 275)
+
+[node name="Door22" parent="Door14" unique_id=661114633 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door14" unique_id=1207957920 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door15" parent="." unique_id=1325218488 instance=ExtResource("3_afuwr")]
+position = Vector2(625, 275)
+
+[node name="Door22" parent="Door15" unique_id=856724096 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door15" unique_id=824901437 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door16" parent="." unique_id=1009767601 instance=ExtResource("3_afuwr")]
+position = Vector2(425, 275)
+
+[node name="Door22" parent="Door16" unique_id=2095712269 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door16" unique_id=234209202 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door17" parent="." unique_id=1881326745 instance=ExtResource("3_afuwr")]
+position = Vector2(225, 275)
+
+[node name="Door22" parent="Door17" unique_id=694183665 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door17" unique_id=814474512 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door18" parent="." unique_id=930392518 instance=ExtResource("3_afuwr")]
+position = Vector2(225, 475)
+
+[node name="Door22" parent="Door18" unique_id=1398241686 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door18" unique_id=526717764 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door19" parent="." unique_id=1231385529 instance=ExtResource("3_afuwr")]
+position = Vector2(425, 475)
+
+[node name="Door22" parent="Door19" unique_id=950415128 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door19" unique_id=444765445 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door20" parent="." unique_id=142373523 instance=ExtResource("3_afuwr")]
+position = Vector2(625, 475)
+
+[node name="Door22" parent="Door20" unique_id=1530311738 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door20" unique_id=1835197541 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Door21" parent="." unique_id=1493283900 instance=ExtResource("3_afuwr")]
+position = Vector2(825, 475)
+
+[node name="Door22" parent="Door21" unique_id=2100762979 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 50)
+
+[node name="Door23" parent="Door21" unique_id=2021754495 instance=ExtResource("3_afuwr")]
+position = Vector2(0, 100)
+
+[node name="Buttons" parent="." unique_id=1161783585 instance=ExtResource("6_12lrj")]
+position = Vector2(-1000, -1000)
+first = 6
+second = 4
+third = 4
+fourth = 4
+
 [node name="SceneTeleporter" parent="." unique_id=722761562 instance=ExtResource("3_fej7t")]
 position = Vector2(-80, 325)
 scale = Vector2(7, 7)
 target_scene = "res://main_room.tscn"
+
+[node name="Paper" type="TextureRect" parent="." unique_id=959344410]
+visible = false
+offset_left = 450.0
+offset_top = 75.0
+offset_right = 490.0
+offset_bottom = 115.0
+texture = ExtResource("10_447nf")
+script = ExtResource("11_q4orn")
+
+[connection signal="reading" from="Note" to="Paper" method="_on_note_reading"]
+[connection signal="switcheroo" from="Switch" to="Door2" method="_on_switch_switcheroo"]
+[connection signal="switcheroo" from="Switch" to="Door10" method="_on_switch_switcheroo"]
+[connection signal="switcheroo" from="Switch" to="Door2/Door22" method="_on_switch_switcheroo"]
+[connection signal="switcheroo" from="Switch" to="Door2/Door23" method="_on_switch_switcheroo"]
+[connection signal="switcheroo" from="Switch" to="Door10/Door22" method="_on_switch_switcheroo"]
+[connection signal="switcheroo" from="Switch" to="Door10/Door23" method="_on_switch_switcheroo"]
+[connection signal="switcheroo" from="Switch2" to="Door2" method="_on_switch_2_switcheroo"]
+[connection signal="switcheroo" from="Switch2" to="Door11" method="_on_switch_2_switcheroo"]
+[connection signal="switcheroo" from="Switch2" to="Door2/Door22" method="_on_switch_2_switcheroo"]
+[connection signal="switcheroo" from="Switch2" to="Door2/Door23" method="_on_switch_2_switcheroo"]
+[connection signal="switcheroo" from="Switch2" to="Door11/Door22" method="_on_switch_2_switcheroo"]
+[connection signal="switcheroo" from="Switch2" to="Door11/Door23" method="_on_switch_2_switcheroo"]
+[connection signal="switcheroo" from="Switch3" to="Door17" method="_on_switch_3_switcheroo"]
+[connection signal="switcheroo" from="Switch3" to="Door17/Door22" method="_on_switch_3_switcheroo"]
+[connection signal="switcheroo" from="Switch3" to="Door17/Door23" method="_on_switch_3_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door9" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door16" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door17" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door19" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door20" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door9/Door22" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door9/Door23" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door16/Door22" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door16/Door23" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door17/Door22" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door17/Door23" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door19/Door22" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door19/Door23" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door20/Door22" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch4" to="Door20/Door23" method="_on_switch_4_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door4" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door13" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door15" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door16" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door4/Door22" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door4/Door23" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door13/Door22" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door13/Door23" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door15/Door22" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door15/Door23" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door16/Door22" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch5" to="Door16/Door23" method="_on_switch_5_switcheroo"]
+[connection signal="switcheroo" from="Switch6" to="Door20" method="_on_switch_6_switcheroo"]
+[connection signal="switcheroo" from="Switch6" to="Door21" method="_on_switch_6_switcheroo"]
+[connection signal="switcheroo" from="Switch6" to="Door20/Door22" method="_on_switch_6_switcheroo"]
+[connection signal="switcheroo" from="Switch6" to="Door20/Door23" method="_on_switch_6_switcheroo"]
+[connection signal="switcheroo" from="Switch6" to="Door21/Door22" method="_on_switch_6_switcheroo"]
+[connection signal="switcheroo" from="Switch6" to="Door21/Door23" method="_on_switch_6_switcheroo"]
+[connection signal="input" from="Keypad" to="Buttons" method="_on_keypad_input"]
+[connection signal="switcheroo" from="Keypad" to="Door" method="_on_keypad_switcheroo"]
+[connection signal="switcheroo" from="Keypad" to="Door/Door22" method="_on_keypad_switcheroo"]
+[connection signal="switcheroo" from="Keypad" to="Door/Door23" method="_on_keypad_switcheroo"]
+[connection signal="correct_code" from="Buttons" to="Keypad" method="_on_buttons_correct_code"]

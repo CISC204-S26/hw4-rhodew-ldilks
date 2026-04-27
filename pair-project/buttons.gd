@@ -9,13 +9,13 @@ extends Node2D
 var code = []
 var numbers_of_code = 0
 var the_text = ""
-var secret_code = [first, second, third, fourth, fifth]
+var secret_code = []
 
 signal correct_code
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,6 +24,7 @@ func _process(delta: float) -> void:
 
 
 func input_number(number):
+	secret_code = [first, second, third, fourth, fifth]
 	if numbers_of_code < 5:
 		code.append(number)
 		numbers_of_code += 1

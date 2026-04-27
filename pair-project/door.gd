@@ -36,3 +36,19 @@ func _on_keycard_reader_unlocked() -> void:
 
 func _on_switch_3_switcheroo() -> void:
 	switch()
+
+
+func _on_switch_2_switcheroo() -> void:
+	switch()
+
+
+func _on_switch_4_switcheroo() -> void:
+	switch()
+
+
+func _on_switch_5_switcheroo() -> void:
+	switch()
+
+
+func _on_switch_6_switcheroo() -> void:
+	switch()

@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://dfkxyqtxlqei8"]
 
+[ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="1_kdutl"]
 [ext_resource type="PackedScene" uid="uid://boygelq1w2dh3" path="res://wall.tscn" id="1_vloss"]
+[ext_resource type="PackedScene" uid="uid://cubcsnxkobfho" path="res://player.tscn" id="2_7yojt"]
+[ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="4_g8uxm"]
+[ext_resource type="Texture2D" uid="uid://bwo0hgg2cpixp" path="res://Note4.png" id="5_g8uxm"]
+[ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="6_f16ov"]
 
 [node name="Kitchen" type="Node2D" unique_id=986633999]
+
+[node name="Note" parent="." unique_id=1282192734 instance=ExtResource("1_kdutl")]
+position = Vector2(600, 100)
+
+[node name="Player" parent="." unique_id=1717959357 instance=ExtResource("2_7yojt")]
+position = Vector2(600, 500)
 
 [node name="Wall" parent="." unique_id=1143150848 instance=ExtResource("1_vloss")]
 position = Vector2(25, 25)
@@ -201,3 +212,26 @@ position = Vector2(600, 0)
 
 [node name="Wall67" parent="Wall" unique_id=155335644 instance=ExtResource("1_vloss")]
 position = Vector2(650, 0)
+
+[node name="Door" parent="." unique_id=199639314 instance=ExtResource("4_g8uxm")]
+position = Vector2(525, 625)
+
+[node name="Door2" parent="." unique_id=1717817752 instance=ExtResource("4_g8uxm")]
+position = Vector2(575, 625)
+
+[node name="Door3" parent="." unique_id=511153197 instance=ExtResource("4_g8uxm")]
+position = Vector2(625, 625)
+
+[node name="Door4" parent="." unique_id=1005133899 instance=ExtResource("4_g8uxm")]
+position = Vector2(675, 625)
+
+[node name="Paper" type="TextureRect" parent="." unique_id=683306361]
+visible = false
+offset_left = 450.0
+offset_top = 75.0
+offset_right = 490.0
+offset_bottom = 115.0
+texture = ExtResource("5_g8uxm")
+script = ExtResource("6_f16ov")
+
+[connection signal="reading" from="Note" to="Paper" method="_on_note_reading"]

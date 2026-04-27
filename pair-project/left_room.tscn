@@ -5,9 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://boygelq1w2dh3" path="res://wall.tscn" id="2_rivfw"]
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="2_x4tuf"]
 [ext_resource type="PackedScene" uid="uid://dnbwsxh4w8u8b" path="res://keypad.tscn" id="3_wn325"]
+[ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="4_hs131"]
 [ext_resource type="PackedScene" path="res://scene_teleporter.tscn" id="4_jbm5b"]
 [ext_resource type="PackedScene" uid="uid://6miagfrtf4i4" path="res://buttons.tscn" id="4_slj8k"]
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="5_m3m1w"]
+[ext_resource type="Texture2D" uid="uid://cntnm0gy5lfcl" path="res://Note2.png" id="10_85m3l"]
+[ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="11_65s4u"]
 
 [node name="LeftRoom" type="Node2D" unique_id=1281125665]
 
@@ -26,8 +29,8 @@ position = Vector2(1100, 100)
 [node name="Keypad" parent="." unique_id=1683995545 instance=ExtResource("3_wn325")]
 position = Vector2(975, 475)
 
-[node name="Buttons" parent="." unique_id=1161783585 instance=ExtResource("4_slj8k")]
-position = Vector2(-1000, -1000)
+[node name="Note" parent="." unique_id=1282192734 instance=ExtResource("4_hs131")]
+position = Vector2(100, 75)
 
 [node name="Player" parent="." unique_id=1717959357 instance=ExtResource("1_5rtc6")]
 position = Vector2(1100, 325)
@@ -305,10 +308,27 @@ position = Vector2(1025, 525)
 [node name="Door8" parent="." unique_id=82784180 instance=ExtResource("5_m3m1w")]
 position = Vector2(1025, 575)
 
+[node name="Buttons" parent="." unique_id=1161783585 instance=ExtResource("4_slj8k")]
+position = Vector2(-1000, -1000)
+first = 9
+second = 7
+third = 3
+fourth = 2
+fifth = 9
+
 [node name="SceneTeleporter" parent="." unique_id=722761562 instance=ExtResource("4_jbm5b")]
 position = Vector2(1280, 325)
 scale = Vector2(7, 7)
 target_scene = "res://main_room.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1873695270]
+visible = false
+offset_left = 450.0
+offset_top = 75.0
+offset_right = 750.0
+offset_bottom = 575.0
+texture = ExtResource("10_85m3l")
+script = ExtResource("11_65s4u")
 
 [connection signal="switcheroo" from="Switch" to="Door" method="_on_switch_switcheroo"]
 [connection signal="switcheroo" from="Switch" to="Door2" method="_on_switch_switcheroo"]
@@ -321,4 +341,5 @@ target_scene = "res://main_room.tscn"
 [connection signal="input" from="Keypad" to="Buttons" method="_on_keypad_input"]
 [connection signal="switcheroo" from="Keypad" to="Door7" method="_on_keypad_switcheroo"]
 [connection signal="switcheroo" from="Keypad" to="Door8" method="_on_keypad_switcheroo"]
+[connection signal="reading" from="Note" to="TextureRect" method="_on_note_reading"]
 [connection signal="correct_code" from="Buttons" to="Keypad" method="_on_buttons_correct_code"]
