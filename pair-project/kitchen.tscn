@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bfej3p7gvh7pr" path="res://door.tscn" id="4_g8uxm"]
 [ext_resource type="Texture2D" uid="uid://bwo0hgg2cpixp" path="res://Note4.png" id="5_g8uxm"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="6_f16ov"]
+[ext_resource type="Texture2D" uid="uid://c0j82crmqh8ti" path="res://spr_crates.png" id="8_77hbq"]
 
 [node name="Kitchen" type="Node2D" unique_id=986633999]
 
@@ -239,5 +240,10 @@ offset_right = 490.0
 offset_bottom = 115.0
 texture = ExtResource("5_g8uxm")
 script = ExtResource("6_f16ov")
+
+[node name="SprCrates" type="Sprite2D" parent="." unique_id=423251344]
+position = Vector2(120, 239)
+scale = Vector2(3, 3)
+texture = ExtResource("8_77hbq")
 
 [connection signal="reading" from="Note" to="Paper" method="_on_note_reading"]
