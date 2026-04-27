@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cubcsnxkobfho"]
 
 [ext_resource type="Script" uid="uid://ct1li2p8np6md" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Texture2D" uid="uid://57b8j4rji34e" path="res://char_spritesheet.png" id="2_onrkg"]
+[ext_resource type="Texture2D" uid="uid://cj2ls2p2boqye" path="res://Player.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(50, 50)
@@ -13,9 +13,7 @@ radius = 46.010868
 script = ExtResource("1_onrkg")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=558477082]
-scale = Vector2(1.5, 1.5)
 texture = ExtResource("2_onrkg")
-hframes = 4
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=447829566]
 shape = SubResource("RectangleShape2D_i3pqv")
