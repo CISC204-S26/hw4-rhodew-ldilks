@@ -8,10 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cjm7rbvlb7b3m" path="res://switch.tscn" id="4_t3c8w"]
 [ext_resource type="PackedScene" uid="uid://cts0qygsgh7r1" path="res://note.tscn" id="5_1oo4e"]
 [ext_resource type="Texture2D" uid="uid://b7np22vfja0mj" path="res://Note1.png" id="8_8007g"]
-[ext_resource type="PackedScene" uid="uid://dfkxyqtxlqei8" path="res://kitchen.tscn" id="8_d6a44"]
 [ext_resource type="Script" uid="uid://coi2tpvammsts" path="res://paper.gd" id="9_bdfba"]
-[ext_resource type="PackedScene" uid="uid://fmudtvyjc6dj" path="res://left_room.tscn" id="9_ruoc2"]
-[ext_resource type="PackedScene" uid="uid://cx1ibse3jk1qw" path="res://right_room.tscn" id="10_l7t8c"]
 
 [node name="MainRoom" type="Node2D" unique_id=322570895]
 
@@ -55,7 +52,7 @@ position = Vector2(600, 325)
 position = Vector2(575, 475)
 
 [node name="Player" parent="." unique_id=1717959357 instance=ExtResource("1_mi4c6")]
-position = Vector2(650, 550)
+position = Vector2(649, 492)
 
 [node name="Wall" parent="." unique_id=1143150848 instance=ExtResource("3_the2v")]
 position = Vector2(25, 25)
@@ -237,21 +234,6 @@ position = Vector2(1150, 500)
 [node name="Wall60" parent="Wall" unique_id=1550525608 instance=ExtResource("3_the2v")]
 position = Vector2(1150, 550)
 
-[node name="SceneTeleporter" parent="." unique_id=722761562 instance=ExtResource("4_a7ayd")]
-position = Vector2(600, 0)
-scale = Vector2(3, 3)
-target_scene = ExtResource("8_d6a44")
-
-[node name="SceneTeleporter2" parent="." unique_id=1841834975 instance=ExtResource("4_a7ayd")]
-position = Vector2(0, 325)
-scale = Vector2(3, 3)
-target_scene = ExtResource("9_ruoc2")
-
-[node name="SceneTeleporter3" parent="." unique_id=573329438 instance=ExtResource("4_a7ayd")]
-position = Vector2(1200, 325)
-scale = Vector2(3, 3)
-target_scene = ExtResource("10_l7t8c")
-
 [node name="Paper" type="TextureRect" parent="." unique_id=1542022812]
 visible = false
 offset_left = 450.0
@@ -260,6 +242,21 @@ offset_right = 750.0
 offset_bottom = 575.0
 texture = ExtResource("8_8007g")
 script = ExtResource("9_bdfba")
+
+[node name="SceneTeleporter" parent="." unique_id=722761562 instance=ExtResource("4_a7ayd")]
+position = Vector2(600, -80)
+scale = Vector2(7, 7)
+target_scene = "res://kitchen.tscn"
+
+[node name="SceneTeleporter2" parent="." unique_id=1111878973 instance=ExtResource("4_a7ayd")]
+position = Vector2(-80, 325)
+scale = Vector2(7, 7)
+target_scene = "res://left_room.tscn"
+
+[node name="SceneTeleporter3" parent="." unique_id=1333322951 instance=ExtResource("4_a7ayd")]
+position = Vector2(1280, 325)
+scale = Vector2(7, 7)
+target_scene = "res://right_room.tscn"
 
 [connection signal="unlocked" from="KeycardReader" to="KeyCardDoor" method="_on_keycard_reader_unlocked"]
 [connection signal="unlocked" from="KeycardReader" to="KeyCardDoor2" method="_on_keycard_reader_unlocked"]
